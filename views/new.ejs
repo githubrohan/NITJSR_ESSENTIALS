@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/ac5aa88489.js" crossorigin="anonymous"></script>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css" rel="stylesheet">
+
+    
+
+    <!--swiper slider-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 col-12">
+                
+            </div>
+            <div class="col-md-4 col-12 text-center">
+                <h2 class="my-md-3 site-title text-white">NITJSR ESSENTIALS</h2>
+            </div>
+            <div class="col-md-4 col-12 text-right">
+                <p class="my-md-4 header-links">
+                    <% if(!currentUser){ %>
+                        <a href="/login" class="px-2" >Log In</a>
+                        <a href="/signup" class="px-2">Create an account</a>
+                    <% } else { %>
+                        <i class="fas fa-user-graduate"></i>
+                        <a><%= currentUser.username.toUpperCase() %></a>
+                        <a href="/logout" class="px-2" >Log Out</a>
+                   <% } %>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/">HOME <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/products">RESALE</a>
+                <!-- <a class="nav-item nav-link" href="/papers">PREVIOUS SEMESTER PAPER</a> -->
+                <a class="nav-item nav-link" href="/products/new">UPLOAD/SELL</a>
+                
+                
+              </div>
+            </div>
+          </nav>  
+    </div>
+</header>
+<main>
+    <div class="container" style="padding:50px; color: white;">
+        <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.432);">
+            <form action="/products" method="POST">
+                <div class="form-group">
+                    <h1 style="font-family:sans-serif;">Sell Your Product</h1>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Product Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="sellor" placeholder="Drafter/calculator/books...">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Image URL</label>
+                  <input type="text" class="form-control" name="image" id="exampleFormControlInput1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Product Price</label>
+                    <input type="text" class="form-control" name="price" id="exampleFormControlInput1" >
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Contact</label>
+                    <input type="text" class="form-control" name="contact" id="exampleFormControlInput1" >
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Hostel</label>
+                    <input type="text" class="form-control" name="hostel" id="exampleFormControlInput1" >
+                  </div>
+                
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Description</label>
+                  <textarea class="form-control" name="discription" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="form-group text-center">
+                    <button class="btn btn-info">UPLOAD</button>
+                </div>
+                
+              </form>
+        </div>
+    </div>
+    
+    
+</main>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

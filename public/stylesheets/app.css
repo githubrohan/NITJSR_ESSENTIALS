@@ -1,0 +1,208 @@
+/* Import form from google font
+1.sofia
+2.roboto
+3.lato
+4.gugi
+ 5.anton*/
+ @import url('https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia&display=swap');
+
+ :root{
+     --light-gray:#2b3032a1;
+     --primary-color:#45ccb8;
+     --border:#2b303218;
+     --text-color:#ff686b;
+     --roboto:"Roboto",sans-serif;
+     --gugi:"Gugi",cursive;
+     --sofia:"Sofia",cursive;
+ }
+
+ .primary-color{
+     color:var(--primary-color);
+ }
+
+ .bg-primary-color{
+     background-color: var(--primary-color)!important;
+ }
+
+ .text-color{
+     color:var(--text-color);
+ }
+
+ .font-roboto{
+     font-family:var(--roboto);
+ }
+
+ .lightblue{
+     color:lightblue;
+ }
+
+ /* Header */
+ header{
+     background-color: var(--primary-color);
+     font-family: var(--roboto);
+ }
+
+ header .site-title{
+     font-family: var(--gugi);
+ }
+ .container.dropdown-toggle,
+ .container.dropdown-item{
+     font-size:0.7em;
+ }
+
+ .header-links a{
+     font-size: 0.9em;
+     text-decoration: none;
+     color:white;
+ }
+
+ /* Navigation Menu */
+ .navbar-nav{
+     padding:0.8em 0em;
+ }
+
+ .navbar-nav .nav-link{
+     font-size: 0.9em;
+     color:var(--light-gray)!important;
+ }
+ .navbar-nav .nav-item .nav-link{
+    padding:0 1.3em; 
+ }
+ .navbar-nav .basket-icon{
+     margin-right: 6.5rem !important;
+ }
+
+
+
+ /* About */
+.aboutcontainer{
+    padding: 50px 100px 0px 100px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.aboutcontainer .jumbotron{
+    background-color: white;
+}
+.about img{
+   padding: 20px;
+   height: 300px;
+   width: auto;
+}
+.about .content{
+    padding: 20px;
+    width: 600px;
+}
+.about h1{
+    
+    /* margin-right: 200px; */
+    text-transform: uppercase;
+    color: #00cdcd;
+    font-size: 40px;
+    font-weight: 700;
+}
+.about p{
+    color: #000;
+    font-size: 15px;
+    font-weight: 450;
+}
+
+/*OurTeam Start*/
+
+body{
+    /* background-image: url(https://i.postimg.cc/pVhWpJzL/background.jpg); */
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.team_top h1{
+    text-transform: uppercase;
+    color: #00cdcd;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+
+.member{
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    background-color: #fff;
+    padding: 20px;
+}
+.img img{
+    width: 130px;
+    border-radius: 50%;
+}
+.m_text h3{
+    font-weight: 800;
+    font-size: 22px;
+    margin-top: 20px;
+    color: #00cdcd;
+}
+.m_text h5{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.m_text p{
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+.m_menu{
+    margin: 0;
+    padding: 0;
+    position: absolute; 
+    left: 0;
+    right: 0;
+    bottom: -35px;
+    background: #fff;
+    padding: 10px;
+    opacity: 0;
+}
+.m_menu ul{
+    margin-bottom: 0px;
+}
+.m_menu ul li a i{
+    color: #F2CE5F;
+}
+.m_menu ul li a{
+    display: block;
+    padding: 7px;
+    font-size: 18px;
+}
+.member:hover .m_menu{
+    opacity: 1;
+    bottom: -40px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+}
+.member:hover .m_text h3{
+    color: #F2CE5F;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+}
+/*OurTeam end*/
+
+/* Footer */
+.footer {position: relative;width: 100%;min-height: 260px;background: #000000;padding: 10px 0;z-index: 1;}
+.footer .social-area {margin-top: 90px;width: 40%;}
+.footer .social-area ul {z-index: 1;display: block;width: 100%;padding: 0;text-align: right;position: absolute;right: 7%;box-sizing: border-box;}
+.footer .social-area ul li {display: inline-block;text-align: center;line-height: 0;}
+.footer .social-area ul li a {font-size: 28px;font-weight: 600;text-transform: uppercase;color: #FFFFFF;text-decoration: none;}
+.footer .social-area ul li a i {display: block;margin-left: 20px;padding: 0 20px;text-align: center;}
+.footer .shr-btn-facebook:hover {color:#3b5998;}
+.footer .shr-btn-instagram:hover {color:#3F729B;}
+.footer .shr-btn-behance:hover {color:#1769FF;}
+.footer .shr-btn-soundcloud:hover {color:#F76700;}
+.footer .social-area ul li a span {display: none;}
+.footer .credits {font-weight: normal;position: absolute;width: 100%;color:#474747;text-align: center;text-transform: uppercase;font-size: 30px;line-height: 1px;padding: 0;}
+.footer .credits p {position: absolute;text-align: left;text-transform: uppercase;font-size: 20px;line-height: 1px;padding: 0;left: 9%;}
+.footer-white {color:#fff;font-weight: normal;}
+.slice-footer {width: 100px;height: 135px;margin-top: -45px;}
+
+
